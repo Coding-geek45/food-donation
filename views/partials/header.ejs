@@ -1,0 +1,21 @@
+
+<header class="header">
+    <img src="images/SPIT_logo.png" alt="">
+    <div><a href="/" class="logo"> <span>Food</span>Donation</a></div>
+     
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <a href="/" class="nav-link">home</a>
+        <a href="/home/about-us" class="nav-link">about Us</a>
+        <a href="/home/mission" class="nav-link">Our mission</a>
+        <a href="/home/contact-us" class="nav-link">Contact us</a>
+        <% if(currentUser) { %>
+            <%= currentUser.firstName[0] %>
+        <% } else { %>
+            <a href="/auth/login" class="nav-link">Login</a>
+            <a href="/auth/signup" class="nav-link">Signup</a>
+        <% } %>
+    </nav>
+</header>
+
